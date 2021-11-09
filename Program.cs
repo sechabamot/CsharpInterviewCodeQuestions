@@ -15,11 +15,14 @@ namespace CsharpInterviewCodeQuestions
             //Q3
             string sentenceToReverse = "this is a wild cart";
             Console.WriteLine($"This sentence '{sentenceToReverse}' read backwords is: {ReverseTheSentence(sentenceToReverse)}");
+            //Q4
+            int[] intArray = new int[] {2,4,6,5};
+            Console.WriteLine($"The total of the even numbers in {intArray.ToString()} {ReturnTotalOfEvenNumbers(intArray)}");
 
         }
 
 
-        //Q.1: How to reverse a string?
+        //Q1: How to reverse a string?
         public static string ReturnReversString(string input)
         {
             string output ="";
@@ -47,6 +50,7 @@ namespace CsharpInterviewCodeQuestions
             return false;
         }
 
+        //Q3: Reverse the order of words in a given string?
         public static string ReverseTheSentence(string input)
         {
             string output = "";
@@ -65,7 +69,23 @@ namespace CsharpInterviewCodeQuestions
             }
 
             return output;
-        } 
+        }
+
+        //Q4: Given an array of ints, write a C# method to total all the values that are even numbers.
+        public static int ReturnTotalOfEvenNumbers(int[] array)
+        {
+            int output = 0;
+            foreach (int nu in array)
+            {
+                if (nu % 2 == 0)
+                {
+                    output += nu;
+                }
+            }
+            return output;
+        }
+
+        //Q5: 
 
     }
 }
